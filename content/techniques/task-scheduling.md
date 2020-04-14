@@ -222,7 +222,7 @@ The `getCronJob()` method returns the named cron job. The returned `CronJob` obj
 **Create** a new cron job dynamically using the `SchedulerRegistry.addCronJob()` method, as follows:
 
 ```typescript
-addCronJob(name: string, seconds: string) {
+addCronJob(name: string, seconds: number) {
   const job = new CronJob(`${seconds} * * * * *`, () => {
     this.logger.warn(`time (${seconds}) for job ${name} to run!`);
   });
@@ -286,7 +286,7 @@ clearInterval(interval);
 **Create** a new interval dynamically using the `SchedulerRegistry.addInterval()` method, as follows:
 
 ```typescript
-addInterval(name: string, seconds: string) {
+addInterval(name: string, seconds: number) {
   const callback = () => {
     this.logger.warn(`Interval ${name} executing at time (${seconds})!`);
   };
@@ -335,7 +335,7 @@ clearTimeout(timeout);
 **Create** a new timeout dynamically using the `SchedulerRegistry.addTimeout()` method, as follows:
 
 ```typescript
-addTimeout(name: string, seconds: string) {
+addTimeout(name: string, seconds: number) {
   const callback = () => {
     this.logger.warn(`Timeout ${name} executing after (${seconds})!`);
   });
