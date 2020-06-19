@@ -103,7 +103,7 @@ The request object represents the HTTP request and has properties for the reques
 <table>
   <tbody>
     <tr>
-      <td><code>@Request()</code></td>
+      <td><code>@Req()</code></td>
       <td><code>req</code></td></tr>
     <tr>
       <td><code>@Response(), @Res()</code><span class="table-code-asterisk">*</span></td>
